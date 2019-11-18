@@ -3,19 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01560E63618BEDC1BB790FA9 /* Pods_GAMR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422C8FCFA7F422347D8D6283 /* Pods_GAMR.framework */; };
 		A0459DF72383165F00D06ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DF62383165F00D06ECB /* AppDelegate.swift */; };
 		A0459DF92383165F00D06ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DF82383165F00D06ECB /* SceneDelegate.swift */; };
 		A0459DFB2383165F00D06ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DFA2383165F00D06ECB /* ViewController.swift */; };
 		A0459DFE2383165F00D06ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0459DFC2383165F00D06ECB /* Main.storyboard */; };
 		A0459E002383165F00D06ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0459DFF2383165F00D06ECB /* Assets.xcassets */; };
 		A0459E032383165F00D06ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0459E012383165F00D06ECB /* LaunchScreen.storyboard */; };
+		A0F159FF23831C62003D305C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0F159FE23831C62003D305C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C9F32B99EE7BDD70B2B159C /* Pods-GAMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAMR.debug.xcconfig"; path = "Target Support Files/Pods-GAMR/Pods-GAMR.debug.xcconfig"; sourceTree = "<group>"; };
+		422C8FCFA7F422347D8D6283 /* Pods_GAMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0459DF32383165F00D06ECB /* GAMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAMR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0459DF62383165F00D06ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0459DF82383165F00D06ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		A0459DFF2383165F00D06ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0459E022383165F00D06ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0459E042383165F00D06ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F159FE23831C62003D305C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB423B6633BCD6DDD937F33E /* Pods-GAMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAMR.release.xcconfig"; path = "Target Support Files/Pods-GAMR/Pods-GAMR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01560E63618BEDC1BB790FA9 /* Pods_GAMR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				A0459DF52383165F00D06ECB /* GAMR */,
 				A0459DF42383165F00D06ECB /* Products */,
+				B252C56264857364FBC65246 /* Pods */,
+				C489C98E92F818912A35F8CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +72,26 @@
 				A0459DFF2383165F00D06ECB /* Assets.xcassets */,
 				A0459E012383165F00D06ECB /* LaunchScreen.storyboard */,
 				A0459E042383165F00D06ECB /* Info.plist */,
+				A0F159FE23831C62003D305C /* GoogleService-Info.plist */,
 			);
 			path = GAMR;
+			sourceTree = "<group>";
+		};
+		B252C56264857364FBC65246 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C9F32B99EE7BDD70B2B159C /* Pods-GAMR.debug.xcconfig */,
+				EB423B6633BCD6DDD937F33E /* Pods-GAMR.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C489C98E92F818912A35F8CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				422C8FCFA7F422347D8D6283 /* Pods_GAMR.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0459E072383165F00D06ECB /* Build configuration list for PBXNativeTarget "GAMR" */;
 			buildPhases = (
+				D6AD989C626BB3D44513EBF9 /* [CP] Check Pods Manifest.lock */,
 				A0459DEF2383165F00D06ECB /* Sources */,
 				A0459DF02383165F00D06ECB /* Frameworks */,
 				A0459DF12383165F00D06ECB /* Resources */,
+				14B1537176DE88B971EA5C08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +156,54 @@
 			files = (
 				A0459E032383165F00D06ECB /* LaunchScreen.storyboard in Resources */,
 				A0459E002383165F00D06ECB /* Assets.xcassets in Resources */,
+				A0F159FF23831C62003D305C /* GoogleService-Info.plist in Resources */,
 				A0459DFE2383165F00D06ECB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14B1537176DE88B971EA5C08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GAMR/Pods-GAMR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GAMR/Pods-GAMR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GAMR/Pods-GAMR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6AD989C626BB3D44513EBF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GAMR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0459DEF2383165F00D06ECB /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		A0459E082383165F00D06ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C9F32B99EE7BDD70B2B159C /* Pods-GAMR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +372,7 @@
 		};
 		A0459E092383165F00D06ECB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB423B6633BCD6DDD937F33E /* Pods-GAMR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
