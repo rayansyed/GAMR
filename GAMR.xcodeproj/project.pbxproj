@@ -65,6 +65,9 @@
 		A0459DF52383165F00D06ECB /* GAMR */ = {
 			isa = PBXGroup;
 			children = (
+				A0F15A02238321DA003D305C /* controller */,
+				A0F15A01238321D4003D305C /* view */,
+				A0F15A00238321C8003D305C /* model */,
 				A0459DF62383165F00D06ECB /* AppDelegate.swift */,
 				A0459DF82383165F00D06ECB /* SceneDelegate.swift */,
 				A0459DFA2383165F00D06ECB /* ViewController.swift */,
@@ -75,6 +78,27 @@
 				A0F159FE23831C62003D305C /* GoogleService-Info.plist */,
 			);
 			path = GAMR;
+			sourceTree = "<group>";
+		};
+		A0F15A00238321C8003D305C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A0F15A01238321D4003D305C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A0F15A02238321DA003D305C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		B252C56264857364FBC65246 /* Pods */ = {
