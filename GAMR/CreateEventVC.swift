@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 
 
@@ -38,7 +39,20 @@ class CreateEventVC: UIViewController {
         dateFormatter.dateFormat = "dd-MM-YYYY h:mm a"
         let strDate = dateFormatter.string(from: eventDate.date)
         edate = strDate
-        print(edate)
+        
+        let newEvent = Event(Title: etitle, Desc: edesc, Location: elocation, Date: edate)
+        print(newEvent.Title)
+        print(newEvent.Desc)
+        print(newEvent.Location)
+        print(newEvent.Date)
+        
+        let EventInfoDictionary = ["title" : newEvent.Title ,"desc" : newEvent.Desc, "date" : newEvent.Date ,"location" : newEvent.Location]
+        
+        let ref = Database.database().reference().child("events").child("\(newEvent.Title)")
+        ref.setValue(EventInfoDictionary)
+        
+       
+
         
     }
     
