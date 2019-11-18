@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class Event{
+    var Title : String = ""
+    var Desc : String = ""
+    var Location : String = ""
+    var Date : String = ""
+    
+    init(Title : String, Desc : String, Location : String, Date : String){
+        self.Title = Title
+        self.Desc = Desc
+        self.Location = Location
+        self.Date = Date
+    }
+    
+}
