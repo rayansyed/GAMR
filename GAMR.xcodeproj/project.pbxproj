@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		01560E63618BEDC1BB790FA9 /* Pods_GAMR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422C8FCFA7F422347D8D6283 /* Pods_GAMR.framework */; };
-		043ED3ED23832D1B00EBE4FF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3EC23832D1B00EBE4FF /* Event.swift */; };
-		043ED3EF23832D2900EBE4FF /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3EE23832D2900EBE4FF /* Login.swift */; };
-		043ED3F123832D7800EBE4FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3F023832D7800EBE4FF /* User.swift */; };
-		043ED3F323832EDF00EBE4FF /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3F223832EDF00EBE4FF /* EventController.swift */; };
-		043ED3F523832EEB00EBE4FF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3F423832EEB00EBE4FF /* LoginController.swift */; };
-		043ED3F723832EF900EBE4FF /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3F623832EF900EBE4FF /* UserController.swift */; };
-		043ED3F923832F2400EBE4FF /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3F823832F2400EBE4FF /* AccountVC.swift */; };
-		043ED3FB23832F3B00EBE4FF /* AppManualVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3FA23832F3B00EBE4FF /* AppManualVC.swift */; };
-		043ED3FD23832F5100EBE4FF /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3FC23832F5100EBE4FF /* CreateEventVC.swift */; };
-		043ED3FF23832F6600EBE4FF /* EventMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED3FE23832F6600EBE4FF /* EventMapVC.swift */; };
-		043ED40123832F7F00EBE4FF /* EventReceiptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED40023832F7F00EBE4FF /* EventReceiptVC.swift */; };
-		043ED40323832F8E00EBE4FF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED40223832F8E00EBE4FF /* LoginVC.swift */; };
-		043ED40523832FA800EBE4FF /* MyEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ED40423832FA800EBE4FF /* MyEventsVC.swift */; };
+		046609C6238331810091181A /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609C5238331810091181A /* EventController.swift */; };
+		046609C82383319E0091181A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609C72383319E0091181A /* UserController.swift */; };
+		046609CA238331C00091181A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609C9238331C00091181A /* LoginController.swift */; };
+		046609CC238331E50091181A /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609CB238331E50091181A /* AccountVC.swift */; };
+		046609CE238331F30091181A /* AppManualVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609CD238331F30091181A /* AppManualVC.swift */; };
+		046609D0238332010091181A /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609CF238332010091181A /* CreateEventVC.swift */; };
+		046609D22383320F0091181A /* EventMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609D12383320F0091181A /* EventMapVC.swift */; };
+		046609D42383321E0091181A /* EventReceiptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609D32383321E0091181A /* EventReceiptVC.swift */; };
+		046609D62383322E0091181A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609D52383322E0091181A /* LoginVC.swift */; };
+		046609D8238332390091181A /* MyEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609D7238332390091181A /* MyEventsVC.swift */; };
+		046609DA238332520091181A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609D9238332520091181A /* Event.swift */; };
+		046609DC238332630091181A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609DB238332630091181A /* Login.swift */; };
+		046609E0238332B30091181A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609DF238332B30091181A /* User.swift */; };
 		A0459DF72383165F00D06ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DF62383165F00D06ECB /* AppDelegate.swift */; };
 		A0459DF92383165F00D06ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DF82383165F00D06ECB /* SceneDelegate.swift */; };
 		A0459DFB2383165F00D06ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DFA2383165F00D06ECB /* ViewController.swift */; };
@@ -31,19 +31,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043ED3EC23832D1B00EBE4FF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../../../Event.swift; sourceTree = "<group>"; };
-		043ED3EE23832D2900EBE4FF /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Login.swift; path = ../../../Login.swift; sourceTree = "<group>"; };
-		043ED3F023832D7800EBE4FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../User.swift; sourceTree = "<group>"; };
-		043ED3F223832EDF00EBE4FF /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventController.swift; path = ../../../EventController.swift; sourceTree = "<group>"; };
-		043ED3F423832EEB00EBE4FF /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = ../../../LoginController.swift; sourceTree = "<group>"; };
-		043ED3F623832EF900EBE4FF /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = ../../../UserController.swift; sourceTree = "<group>"; };
-		043ED3F823832F2400EBE4FF /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountVC.swift; path = ../../../AccountVC.swift; sourceTree = "<group>"; };
-		043ED3FA23832F3B00EBE4FF /* AppManualVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppManualVC.swift; path = ../../../AppManualVC.swift; sourceTree = "<group>"; };
-		043ED3FC23832F5100EBE4FF /* CreateEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateEventVC.swift; path = ../../../CreateEventVC.swift; sourceTree = "<group>"; };
-		043ED3FE23832F6600EBE4FF /* EventMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventMapVC.swift; path = ../../../EventMapVC.swift; sourceTree = "<group>"; };
-		043ED40023832F7F00EBE4FF /* EventReceiptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventReceiptVC.swift; path = ../../../AllWeather/EventReceiptVC.swift; sourceTree = "<group>"; };
-		043ED40223832F8E00EBE4FF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = ../../../LoginVC.swift; sourceTree = "<group>"; };
-		043ED40423832FA800EBE4FF /* MyEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyEventsVC.swift; path = ../../../MyEventsVC.swift; sourceTree = "<group>"; };
+		046609C5238331810091181A /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventController.swift; path = GAMR/EventController.swift; sourceTree = SOURCE_ROOT; };
+		046609C72383319E0091181A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = GAMR/UserController.swift; sourceTree = SOURCE_ROOT; };
+		046609C9238331C00091181A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = GAMR/LoginController.swift; sourceTree = SOURCE_ROOT; };
+		046609CB238331E50091181A /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountVC.swift; path = GAMR/AccountVC.swift; sourceTree = SOURCE_ROOT; };
+		046609CD238331F30091181A /* AppManualVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppManualVC.swift; path = GAMR/AppManualVC.swift; sourceTree = SOURCE_ROOT; };
+		046609CF238332010091181A /* CreateEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateEventVC.swift; path = GAMR/CreateEventVC.swift; sourceTree = SOURCE_ROOT; };
+		046609D12383320F0091181A /* EventMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventMapVC.swift; path = GAMR/EventMapVC.swift; sourceTree = SOURCE_ROOT; };
+		046609D32383321E0091181A /* EventReceiptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventReceiptVC.swift; path = GAMR/EventReceiptVC.swift; sourceTree = SOURCE_ROOT; };
+		046609D52383322E0091181A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = GAMR/LoginVC.swift; sourceTree = SOURCE_ROOT; };
+		046609D7238332390091181A /* MyEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyEventsVC.swift; path = GAMR/MyEventsVC.swift; sourceTree = SOURCE_ROOT; };
+		046609D9238332520091181A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Event.swift; path = GAMR/Event.swift; sourceTree = SOURCE_ROOT; };
+		046609DB238332630091181A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Login.swift; path = GAMR/Login.swift; sourceTree = SOURCE_ROOT; };
+		046609DF238332B30091181A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = GAMR/User.swift; sourceTree = SOURCE_ROOT; };
 		0C9F32B99EE7BDD70B2B159C /* Pods-GAMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAMR.debug.xcconfig"; path = "Target Support Files/Pods-GAMR/Pods-GAMR.debug.xcconfig"; sourceTree = "<group>"; };
 		422C8FCFA7F422347D8D6283 /* Pods_GAMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0459DF32383165F00D06ECB /* GAMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAMR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,9 +109,9 @@
 		A0F15A00238321C8003D305C /* model */ = {
 			isa = PBXGroup;
 			children = (
-				043ED3EC23832D1B00EBE4FF /* Event.swift */,
-				043ED3EE23832D2900EBE4FF /* Login.swift */,
-				043ED3F023832D7800EBE4FF /* User.swift */,
+				046609D9238332520091181A /* Event.swift */,
+				046609DB238332630091181A /* Login.swift */,
+				046609DF238332B30091181A /* User.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -119,13 +119,13 @@
 		A0F15A01238321D4003D305C /* view */ = {
 			isa = PBXGroup;
 			children = (
-				043ED3F823832F2400EBE4FF /* AccountVC.swift */,
-				043ED3FA23832F3B00EBE4FF /* AppManualVC.swift */,
-				043ED3FC23832F5100EBE4FF /* CreateEventVC.swift */,
-				043ED3FE23832F6600EBE4FF /* EventMapVC.swift */,
-				043ED40023832F7F00EBE4FF /* EventReceiptVC.swift */,
-				043ED40223832F8E00EBE4FF /* LoginVC.swift */,
-				043ED40423832FA800EBE4FF /* MyEventsVC.swift */,
+				046609CB238331E50091181A /* AccountVC.swift */,
+				046609CD238331F30091181A /* AppManualVC.swift */,
+				046609CF238332010091181A /* CreateEventVC.swift */,
+				046609D12383320F0091181A /* EventMapVC.swift */,
+				046609D32383321E0091181A /* EventReceiptVC.swift */,
+				046609D52383322E0091181A /* LoginVC.swift */,
+				046609D7238332390091181A /* MyEventsVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -133,9 +133,9 @@
 		A0F15A02238321DA003D305C /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				043ED3F223832EDF00EBE4FF /* EventController.swift */,
-				043ED3F423832EEB00EBE4FF /* LoginController.swift */,
-				043ED3F623832EF900EBE4FF /* UserController.swift */,
+				046609C5238331810091181A /* EventController.swift */,
+				046609C72383319E0091181A /* UserController.swift */,
+				046609C9238331C00091181A /* LoginController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -273,22 +273,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043ED3F723832EF900EBE4FF /* UserController.swift in Sources */,
-				043ED3ED23832D1B00EBE4FF /* Event.swift in Sources */,
-				043ED3EF23832D2900EBE4FF /* Login.swift in Sources */,
-				043ED3FB23832F3B00EBE4FF /* AppManualVC.swift in Sources */,
-				043ED3F123832D7800EBE4FF /* User.swift in Sources */,
+				046609CE238331F30091181A /* AppManualVC.swift in Sources */,
 				A0459DFB2383165F00D06ECB /* ViewController.swift in Sources */,
-				043ED3FF23832F6600EBE4FF /* EventMapVC.swift in Sources */,
 				A0459DF72383165F00D06ECB /* AppDelegate.swift in Sources */,
-				043ED3F923832F2400EBE4FF /* AccountVC.swift in Sources */,
-				043ED3F523832EEB00EBE4FF /* LoginController.swift in Sources */,
-				043ED40123832F7F00EBE4FF /* EventReceiptVC.swift in Sources */,
-				043ED3FD23832F5100EBE4FF /* CreateEventVC.swift in Sources */,
-				043ED3F323832EDF00EBE4FF /* EventController.swift in Sources */,
+				046609D22383320F0091181A /* EventMapVC.swift in Sources */,
+				046609E0238332B30091181A /* User.swift in Sources */,
 				A0459DF92383165F00D06ECB /* SceneDelegate.swift in Sources */,
-				043ED40323832F8E00EBE4FF /* LoginVC.swift in Sources */,
-				043ED40523832FA800EBE4FF /* MyEventsVC.swift in Sources */,
+				046609CC238331E50091181A /* AccountVC.swift in Sources */,
+				046609DC238332630091181A /* Login.swift in Sources */,
+				046609C82383319E0091181A /* UserController.swift in Sources */,
+				046609D42383321E0091181A /* EventReceiptVC.swift in Sources */,
+				046609D0238332010091181A /* CreateEventVC.swift in Sources */,
+				046609CA238331C00091181A /* LoginController.swift in Sources */,
+				046609C6238331810091181A /* EventController.swift in Sources */,
+				046609D62383322E0091181A /* LoginVC.swift in Sources */,
+				046609DA238332520091181A /* Event.swift in Sources */,
+				046609D8238332390091181A /* MyEventsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
