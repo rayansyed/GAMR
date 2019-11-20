@@ -51,20 +51,16 @@ class CreateEventVC: UIViewController {
         let ref = Database.database().reference().child("events").child("\(newEvent.Title)")
         ref.setValue(EventInfoDictionary)
         
-       
-
+        self.openReceiptScene()
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func openReceiptScene()
+    {
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let receiptVC = mainSB.instantiateViewController(withIdentifier: "ReceiptScene") as! EventReceiptVC
+        receiptVC.dbTitle = self.etitle
+        self.present(receiptVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(receiptVC, animated: true)
     }
-    */
-
 }
