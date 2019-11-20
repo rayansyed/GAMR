@@ -68,6 +68,14 @@ class CreateEventVC: UIViewController {
         self.navigationController?.pushViewController(receiptVC, animated: true)
     }
     
+    @IBAction func handleTap(tapGestureRecognizer: UITapGestureRecognizer){
+        guard tapGestureRecognizer.view != nil else { return }
+               
+          if tapGestureRecognizer.state == .ended {
+             self.view.endEditing(true)
+          }
+    }
+    
     
 }
 

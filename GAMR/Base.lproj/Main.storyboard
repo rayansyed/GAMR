@@ -173,6 +173,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OPb-CF-A8S" firstAttribute="top" secondItem="KgW-Jp-ngm" secondAttribute="bottom" constant="40" id="27S-g4-DDZ"/>
                             <constraint firstItem="Sik-sz-ux3" firstAttribute="leading" secondItem="UZd-Cy-jJC" secondAttribute="leading" constant="20" id="30h-Mz-45c"/>
@@ -194,6 +195,9 @@
                             <constraint firstItem="UZd-Cy-jJC" firstAttribute="trailing" secondItem="y0I-ps-hpx" secondAttribute="trailing" constant="20" id="rUF-Xz-m0P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UZd-Cy-jJC"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GtD-9w-7WO" appends="YES" id="g06-bQ-yfb"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="eventDate" destination="Sik-sz-ux3" id="bye-4a-cht"/>
@@ -203,6 +207,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pN-qL-2ey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GtD-9w-7WO">
+                    <connections>
+                        <action selector="handleTapWithTapGestureRecognizer:" destination="uAa-gs-n62" id="Jcs-5O-8Hu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="995.65217391304361" y="104.46428571428571"/>
         </scene>
