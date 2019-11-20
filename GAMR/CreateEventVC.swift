@@ -25,6 +25,10 @@ class CreateEventVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        eventTitle.useUnderline()
+        eventLocation.useUnderline()
+        eventDesc.useUnderline()
 
         // Do any additional setup after loading the view.
     }
@@ -63,4 +67,9 @@ class CreateEventVC: UIViewController {
         self.present(receiptVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(receiptVC, animated: true)
     }
+    
+    
 }
+
+
+
