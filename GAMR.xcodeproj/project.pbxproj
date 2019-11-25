@@ -22,6 +22,7 @@
 		046609DC238332630091181A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609DB238332630091181A /* Login.swift */; };
 		046609E0238332B30091181A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609DF238332B30091181A /* User.swift */; };
 		73B484E6238735310063E41D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B484E5238735310063E41D /* RoundButton.swift */; };
+		A0297492238C52F300945EF3 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0297491238C52F300945EF3 /* SignUpVC.swift */; };
 		A0459DF72383165F00D06ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DF62383165F00D06ECB /* AppDelegate.swift */; };
 		A0459DF92383165F00D06ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DF82383165F00D06ECB /* SceneDelegate.swift */; };
 		A0459DFB2383165F00D06ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DFA2383165F00D06ECB /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		A0459E002383165F00D06ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0459DFF2383165F00D06ECB /* Assets.xcassets */; };
 		A0459E032383165F00D06ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0459E012383165F00D06ECB /* LaunchScreen.storyboard */; };
 		A0F159FF23831C62003D305C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0F159FE23831C62003D305C /* GoogleService-Info.plist */; };
+		A0F15A042388C230003D305C /* ListEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F15A032388C230003D305C /* ListEventsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,7 @@
 		0C9F32B99EE7BDD70B2B159C /* Pods-GAMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAMR.debug.xcconfig"; path = "Target Support Files/Pods-GAMR/Pods-GAMR.debug.xcconfig"; sourceTree = "<group>"; };
 		422C8FCFA7F422347D8D6283 /* Pods_GAMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B484E5238735310063E41D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A0297491238C52F300945EF3 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		A0459DF32383165F00D06ECB /* GAMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAMR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0459DF62383165F00D06ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0459DF82383165F00D06ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		A0459E022383165F00D06ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0459E042383165F00D06ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0F159FE23831C62003D305C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0F15A032388C230003D305C /* ListEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsVC.swift; sourceTree = "<group>"; };
 		EB423B6633BCD6DDD937F33E /* Pods-GAMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAMR.release.xcconfig"; path = "Target Support Files/Pods-GAMR/Pods-GAMR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +133,8 @@
 				046609D32383321E0091181A /* EventReceiptVC.swift */,
 				046609D52383322E0091181A /* LoginVC.swift */,
 				046609D7238332390091181A /* MyEventsVC.swift */,
+				A0F15A032388C230003D305C /* ListEventsVC.swift */,
+				A0297491238C52F300945EF3 /* SignUpVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -283,12 +289,14 @@
 				046609E0238332B30091181A /* User.swift in Sources */,
 				A0459DF92383165F00D06ECB /* SceneDelegate.swift in Sources */,
 				046609CC238331E50091181A /* AccountVC.swift in Sources */,
+				A0297492238C52F300945EF3 /* SignUpVC.swift in Sources */,
 				046609DC238332630091181A /* Login.swift in Sources */,
 				046609C82383319E0091181A /* UserController.swift in Sources */,
 				046609D42383321E0091181A /* EventReceiptVC.swift in Sources */,
 				046609D0238332010091181A /* CreateEventVC.swift in Sources */,
 				046609CA238331C00091181A /* LoginController.swift in Sources */,
 				046609C6238331810091181A /* EventController.swift in Sources */,
+				A0F15A042388C230003D305C /* ListEventsVC.swift in Sources */,
 				046609D62383322E0091181A /* LoginVC.swift in Sources */,
 				73B484E6238735310063E41D /* RoundButton.swift in Sources */,
 				046609DA238332520091181A /* Event.swift in Sources */,
@@ -438,13 +446,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U6LHAX2SMD;
+				DEVELOPMENT_TEAM = HCQTX7B96N;
 				INFOPLIST_FILE = GAMR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AH.GAMR;
+				PRODUCT_BUNDLE_IDENTIFIER = RS.GAMR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,13 +465,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U6LHAX2SMD;
+				DEVELOPMENT_TEAM = HCQTX7B96N;
 				INFOPLIST_FILE = GAMR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AH.GAMR;
+				PRODUCT_BUNDLE_IDENTIFIER = RS.GAMR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
