@@ -99,7 +99,16 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     
     @IBAction func signUp()
     {
-        
+        openSignUpScene()
+    }
+    
+    
+    func openSignUpScene()
+    {
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let signUpVC = mainSB.instantiateViewController(withIdentifier: "SignUpScene") as! SignUpVC
+        self.present(signUpVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
     

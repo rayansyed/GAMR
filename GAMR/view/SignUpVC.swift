@@ -9,6 +9,21 @@
 import UIKit
 
 class SignUpVC: UIViewController {
+    
+    var userController = UserController()
+    
+    @IBOutlet var name : UITextField!
+    @IBOutlet var username : UITextField!
+    @IBOutlet var password : UITextField!
+    @IBOutlet var cPassword : UITextField!
+    @IBOutlet var email : UITextField!
+    
+    
+    var uName : String = ""
+    var uUser : String = ""
+    var uPass : String = ""
+    var uCPass : String = ""
+    var uEmail : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,14 +32,20 @@ class SignUpVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func createUser(){
+        print("Creating User")
+        uName = name.text ?? ""
+        uUser = username.text ?? ""
+        uPass = password.text ?? ""
+        uCPass = cPassword.text ?? ""
+        uEmail = email.text ?? ""
+        
+        if(name.text != "" && username.text != "" && password.text != "" && cPassword.text != "" && email.text != "" && password.text == cPassword.text)
+        {
+            let newUser = User(Name: uName, Username: uUser, Password: uPass, Email: uEmail)
+            userController.insertUser(newUser: newUser)
+        }
+        
     }
-    */
 
 }
