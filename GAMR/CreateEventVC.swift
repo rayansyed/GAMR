@@ -12,6 +12,8 @@ import FirebaseDatabase
 
 
 class CreateEventVC: UIViewController {
+    var eventController = EventController()
+
     @IBOutlet var eventTitle : UITextField!
     @IBOutlet var eventDesc : UITextField!
     @IBOutlet var eventLocation : UITextField!
@@ -45,15 +47,8 @@ class CreateEventVC: UIViewController {
         edate = strDate
         
         let newEvent = Event(Title: etitle, Desc: edesc, Location: elocation, Date: edate)
-        print(newEvent.Title)
-        print(newEvent.Desc)
-        print(newEvent.Location)
-        print(newEvent.Date)
-        
-        let EventInfoDictionary = ["title" : newEvent.Title ,"desc" : newEvent.Desc, "date" : newEvent.Date ,"location" : newEvent.Location]
-        
-        let ref = Database.database().reference().child("events").child("\(newEvent.Title)")
-        ref.setValue(EventInfoDictionary)
+        eventController.insertEvent(newEvent: newEvent)
+
         
         self.openReceiptScene()
         

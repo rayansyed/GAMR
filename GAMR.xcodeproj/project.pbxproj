@@ -23,6 +23,7 @@
 		046609E0238332B30091181A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046609DF238332B30091181A /* User.swift */; };
 		73B484E6238735310063E41D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B484E5238735310063E41D /* RoundButton.swift */; };
 		A0297492238C52F300945EF3 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0297491238C52F300945EF3 /* SignUpVC.swift */; };
+		A02974B4238C6DEA00945EF3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02974B3238C6DEA00945EF3 /* HomeVC.swift */; };
 		A0459DF72383165F00D06ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DF62383165F00D06ECB /* AppDelegate.swift */; };
 		A0459DF92383165F00D06ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DF82383165F00D06ECB /* SceneDelegate.swift */; };
 		A0459DFB2383165F00D06ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0459DFA2383165F00D06ECB /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		422C8FCFA7F422347D8D6283 /* Pods_GAMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B484E5238735310063E41D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A0297491238C52F300945EF3 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		A02974B3238C6DEA00945EF3 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		A0459DF32383165F00D06ECB /* GAMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAMR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0459DF62383165F00D06ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0459DF82383165F00D06ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				046609D7238332390091181A /* MyEventsVC.swift */,
 				A0F15A032388C230003D305C /* ListEventsVC.swift */,
 				A0297491238C52F300945EF3 /* SignUpVC.swift */,
+				A02974B3238C6DEA00945EF3 /* HomeVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046609CE238331F30091181A /* AppManualVC.swift in Sources */,
+				A02974B4238C6DEA00945EF3 /* HomeVC.swift in Sources */,
 				A0459DFB2383165F00D06ECB /* ViewController.swift in Sources */,
 				A0459DF72383165F00D06ECB /* AppDelegate.swift in Sources */,
 				046609D22383320F0091181A /* EventMapVC.swift in Sources */,
