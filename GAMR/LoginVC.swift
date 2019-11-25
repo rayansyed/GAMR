@@ -84,7 +84,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
                     print("Account Does Not Exist")
                     let alert = UIAlertController(title: "Account Credentials Error", message: "The username or password is incorrect", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    super.self().present(alert, animated: true, completion: nil)
                 }
                 
             }
@@ -107,6 +107,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let signUpVC = mainSB.instantiateViewController(withIdentifier: "SignUpScene") as! SignUpVC
+        signUpVC.modalPresentationStyle = .fullScreen
         self.present(signUpVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
@@ -135,13 +136,13 @@ class LoginVC: UIViewController, UITextFieldDelegate{
                         //convert data type into String
                         let dataString = String(data: jsonData, encoding: String.Encoding.utf8)
                         
-                        print(dataString)
+                        //print(dataString)
                         
                         //convert string into jsonObject
                         if let jsonObj = try?JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? NSDictionary{
                             
                             
-                            print(jsonObj)
+                            //print(jsonObj)
                         
                     
                             if let famousquotes = jsonObj.value(forKey: "Quote") as?
