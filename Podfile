@@ -8,5 +8,6 @@ target 'GAMR' do
   # Pods for GAMR
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'CSSimpleSideMenu'
 
 end

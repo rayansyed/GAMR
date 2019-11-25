@@ -36,21 +36,32 @@ class CreateEventVC: UIViewController {
     }
     
     @IBAction func createEvent(_ sender: UIButton){
-        print("Creating Event")
-        etitle = eventTitle.text ?? "Unknown"
-        edesc = eventDesc.text ?? "Unknown"
-        elocation = eventLocation.text ?? "Unknown"
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-YYYY h:mm a"
-        let strDate = dateFormatter.string(from: eventDate.date)
-        edate = strDate
+        etitle = eventTitle.text ?? ""
+        edesc = eventDesc.text ?? ""
+        elocation = eventLocation.text ?? ""
         
-        let newEvent = Event(Title: etitle, Desc: edesc, Location: elocation, Date: edate)
-        eventController.insertEvent(newEvent: newEvent)
+        if(etitle != "" && edesc != "" && elocation != ""){
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-YYYY h:mm a"
+            let strDate = dateFormatter.string(from: eventDate.date)
+            edate = strDate
+            
+            let newEvent = Event(Title: etitle, Desc: edesc, Location: elocation, Date: edate)
+            eventController.insertEvent(newEvent: newEvent)
 
+            
+            self.openReceiptScene()
+            
+        }
+        else{
+            let alert = UIAlertController(title: "Create Event Error", message: "All fields are required", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+        }
         
-        self.openReceiptScene()
+
         
     }
     

@@ -51,6 +51,8 @@ class ListEventsVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! UITableViewCell
         cell.textLabel?.text = keyArray[indexPath.item]
+        cell.textLabel?.textColor = UIColor.white
+
         return cell
     }
 
