@@ -9,7 +9,10 @@
 import Foundation
 import FirebaseDatabase
 
-public class UserController{
+public class UserController : UIViewController{
+    
+    
+    var userArray : [String] = []
     
     
     func insertUser(newUser: User){
@@ -28,10 +31,49 @@ public class UserController{
     }
     
     func updateUser(user : User){
+//
+//
+//            let ref = Database.database().reference()
+//            ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
+//                // Get user value
+//                  for child in snapshot.children {
+//                    let snap = child as! DataSnapshot
+//                    let key = snap.key
+//                    self.userArray.append(key)
+//
+//                  }
+//              })
+//
+//            for username in userArray
+//            {
+//                if(username == user.username)
+//                {
+//                    return false
+//                }
+//            }
+//
+//            return true
 
     }
     
     func deleteUser(email: String){
+
+        
+    }
+    
+    func checkUser(user : User, check: String)
+    {
+        Database.database().reference().child("users").observeSingleEvent(of: .value, with: {(snapshot) in
+
+            if snapshot.hasChild("\(user.username)")
+            {
+                
+
+            }
+
+
+        })
+        
 
         
     }
