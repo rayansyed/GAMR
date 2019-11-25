@@ -77,7 +77,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
 
                 if(username == dbusername && password == dbpassword)
                 {
-                    print("YOURE A BOZO")
+                    self.openHomeScene()
                 }
                 else
                 {
@@ -112,6 +112,15 @@ class LoginVC: UIViewController, UITextFieldDelegate{
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
+    func openHomeScene()
+    {
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeVC = mainSB.instantiateViewController(withIdentifier: "HomeScene") as! HomeVC
+        homeVC.modalPresentationStyle = .fullScreen
+        self.present(homeVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(homeVC, animated: true)
+    }
+    
     
     func getQuotes(){
             print("Getting Quotes")
@@ -136,13 +145,13 @@ class LoginVC: UIViewController, UITextFieldDelegate{
                         //convert data type into String
                         let dataString = String(data: jsonData, encoding: String.Encoding.utf8)
                         
-                        print(dataString)
+                        //print(dataString)
                         
                         //convert string into jsonObject
                         if let jsonObj = try?JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? NSDictionary{
                             
                             
-                            print(jsonObj)
+                            //print(jsonObj)
                         
                     
                             if let famousquotes = jsonObj.value(forKey: "Quote") as?
