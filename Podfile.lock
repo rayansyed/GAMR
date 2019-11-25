@@ -1,5 +1,4 @@
 PODS:
-  - CSSimpleSideMenu (1.1.3)
   - Firebase/Core (6.13.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.1.6)
@@ -74,13 +73,11 @@ PODS:
   - nanopb/encode (0.3.9011)
 
 DEPENDENCIES:
-  - CSSimpleSideMenu
   - Firebase/Core
   - Firebase/Database
 
 SPEC REPOS:
   trunk:
-    - CSSimpleSideMenu
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -97,7 +94,6 @@ SPEC REPOS:
     - nanopb
 
 SPEC CHECKSUMS:
-  CSSimpleSideMenu: c98d575017fafd4bd14294978b7d6429e472827d
   Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
   FirebaseAnalytics: 45f36d9c429fc91d206283900ab75390cd05ee8a
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -113,6 +109,6 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
 
-PODFILE CHECKSUM: d47e9ed93384bde9b2da9062c8996e677d05afdf
+PODFILE CHECKSUM: a5496e23104bb5dec521359a1c2655f8e7d39abf
 
 COCOAPODS: 1.8.4
