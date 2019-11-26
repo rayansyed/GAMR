@@ -21,19 +21,25 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        // get the navigation bar from the current navigation controller if there is one
+
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage() //remove pesky 1 pixel line
+        navigationController?.navigationBar.tintColor = UIColor(red:1.00, green:0.38, blue:0.85, alpha:1.0)
         
-    
         userField.useUnderline()
         passField.useUnderline()
         
         self.userField.delegate = self
         self.passField.delegate = self
-
+        
         getQuotes()
         
     }
-    
-    
+
+
+
     override func viewWillAppear(_ animated: Bool) {
     AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
     }
@@ -108,7 +114,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let signUpVC = mainSB.instantiateViewController(withIdentifier: "SignUpScene") as! SignUpVC
         signUpVC.modalPresentationStyle = .fullScreen
-        self.present(signUpVC, animated: true, completion: nil)
+        //self.present(signUpVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
@@ -117,9 +123,11 @@ class LoginVC: UIViewController, UITextFieldDelegate{
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = mainSB.instantiateViewController(withIdentifier: "HomeScene") as! HomeVC
         homeVC.modalPresentationStyle = .fullScreen
-        self.present(homeVC, animated: true, completion: nil)
+        //self.present(homeVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
+    
+
     
     
     func getQuotes(){

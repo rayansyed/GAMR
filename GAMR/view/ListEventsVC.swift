@@ -4,7 +4,7 @@
 //
 //  Created by Rayan Syed on 2019-11-22.
 //  Copyright © 2019 Rayan Syed. All rights reserved.
-//
+
 
 import UIKit
 import FirebaseDatabase
@@ -12,6 +12,7 @@ import FirebaseDatabase
 class ListEventsVC: UITableViewController {
     
     var keyArray : [String] = []
+    var valueArray : [String] = []
     var eventTitle: String = ""
     
 
@@ -27,6 +28,7 @@ class ListEventsVC: UITableViewController {
                 let value = snap.value
                 print("key = \(key)  value = \(value!)")
                 self.keyArray.append(key)
+//                self.valueArray.append(value as! String)
                 
               }
             

@@ -44,7 +44,7 @@ class SignUpVC: UIViewController {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let logInVC = mainSB.instantiateViewController(withIdentifier: "LogInScene") as! LoginVC
         logInVC.modalPresentationStyle = .fullScreen
-        self.present(logInVC, animated: true, completion: nil)
+        //self.present(logInVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(logInVC, animated: true)
     }
     

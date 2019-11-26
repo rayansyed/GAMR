@@ -27,7 +27,7 @@ class CreateEventVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         eventTitle.useUnderline()
         eventLocation.useUnderline()
         eventDesc.useUnderline()
@@ -70,7 +70,7 @@ class CreateEventVC: UIViewController {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let receiptVC = mainSB.instantiateViewController(withIdentifier: "ReceiptScene") as! EventReceiptVC
         receiptVC.dbTitle = self.etitle
-        self.present(receiptVC, animated: true, completion: nil)
+        //self.present(receiptVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(receiptVC, animated: true)
     }
     
