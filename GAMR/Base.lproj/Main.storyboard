@@ -232,7 +232,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pN-qL-2ey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="GtD-9w-7WO">
                     <connections>
-                        <action selector="handleTapWithTapGestureRecognizer:" destination="uAa-gs-n62" id="Jcs-5O-8Hu"/>
+                        <action selector="handleTapWithTapGestureRecognizer:" destination="uAa-gs-n62" id="5Lr-d2-cNF"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
