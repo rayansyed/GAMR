@@ -17,6 +17,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     @IBOutlet var quoteLabel : UILabel!
     var quotes: [String] = []
     var ref = Database.database().reference()
+    var toolbar = UIToolbar()
 
     override func viewDidLoad() {
         
@@ -26,8 +27,9 @@ class LoginVC: UIViewController, UITextFieldDelegate{
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage() //remove pesky 1 pixel line
-        navigationController?.navigationBar.tintColor = UIColor(red:1.00, green:0.38, blue:0.85, alpha:1.0)
-        
+        navigationController?.navigationBar.tintColor = UIColor(red:1.00, green:0.38, blue:0.85, alpha:1.0)    
+        navigationController?.toolbar.tintColor = UIColor(red:1.00, green:0.38, blue:0.85, alpha:1.0)
+    
         userField.useUnderline()
         passField.useUnderline()
         
