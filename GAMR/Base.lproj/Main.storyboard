@@ -453,6 +453,34 @@
             </objects>
             <point key="canvasLocation" x="3577" y="102"/>
         </scene>
+        <!--AccountVC-->
+        <scene sceneID="AYu-io-UYp">
+            <objects>
+                <viewController storyboardIdentifier="AccountScene" id="EeZ-b5-7V9" customClass="AccountVC" customModule="GAMR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oCG-aV-gt1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN5-lg-dPe">
+                                <rect key="frame" x="20" y="64" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.95513814689999998" green="0.33897358179999998" blue="0.79610961680000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PN5-lg-dPe" firstAttribute="leading" secondItem="aJF-ZH-5of" secondAttribute="leading" constant="20" id="MQp-vW-RHt"/>
+                            <constraint firstItem="PN5-lg-dPe" firstAttribute="top" secondItem="aJF-ZH-5of" secondAttribute="top" constant="20" id="qzN-dy-Ve0"/>
+                            <constraint firstItem="aJF-ZH-5of" firstAttribute="trailing" secondItem="PN5-lg-dPe" secondAttribute="trailing" constant="20" id="z7L-BQ-dwB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aJF-ZH-5of"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBj-t2-EI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4436" y="104"/>
+        </scene>
         <!--Sign UpVC-->
         <scene sceneID="vCl-hE-nSb">
             <objects>
@@ -486,13 +514,13 @@
                                 <rect key="frame" x="40" y="275.5" width="334" height="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzC-MU-HGT">
                                 <rect key="frame" x="40" y="337.5" width="334" height="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rd1-7m-Jq8">
                                 <rect key="frame" x="40" y="399.5" width="334" height="22"/>
@@ -516,19 +544,9 @@
                                     <action selector="createUser" destination="86T-uE-mP8" eventType="touchUpInside" id="ZNb-a5-cUr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kk-HJ-1rl">
-                                <rect key="frame" x="175" y="636" width="68" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Go Back">
-                                    <color key="titleColor" red="0.97587293389999996" green="0.37920117380000001" blue="0.84711986780000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToLogin" destination="86T-uE-mP8" eventType="touchUpInside" id="8hJ-n7-TSR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Nhi-QO-1GN" firstAttribute="leading" secondItem="9FL-Zi-vPS" secondAttribute="leading" constant="40" id="091-wy-G1N"/>
                             <constraint firstItem="9FL-Zi-vPS" firstAttribute="trailing" secondItem="DFb-ri-IZA" secondAttribute="trailing" constant="40" id="1ST-6u-SZL"/>
@@ -556,6 +574,9 @@
                             <constraint firstItem="9FL-Zi-vPS" firstAttribute="trailing" secondItem="Xuc-Bx-DpO" secondAttribute="trailing" constant="140" id="yFI-Og-1c3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9FL-Zi-vPS"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mJ8-sB-QWb" appends="YES" id="M6c-GR-reg"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="cPassword" destination="zzC-MU-HGT" id="9ZC-Cd-Tju"/>
@@ -566,6 +587,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FUk-ll-2dw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mJ8-sB-QWb">
+                    <connections>
+                        <action selector="handleTapWithTapGestureRecognizer:" destination="86T-uE-mP8" id="kq1-Md-4tf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-823.1884057971015" y="101.78571428571428"/>
         </scene>

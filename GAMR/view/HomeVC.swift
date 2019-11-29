@@ -15,13 +15,12 @@ class HomeVC: UIViewController {
 
         self.navigationItem.setHidesBackButton(true, animated:true);
 
-        let test = UIBarButtonItem(image: UIImage(named: "pub.png"), style: .done, target: self, action: #selector(tapCreate))
-        let test2 = UIBarButtonItem(image: UIImage(named: "list.png"), style: .done, target: self, action: #selector(tapList))
-        let test3 = UIBarButtonItem(image: UIImage(named: "craft.png"), style: .done, target: self, action: #selector(tapCreate))
-        let test4 = UIBarButtonItem(image: UIImage(named: "explore.png"), style: .done, target: self, action: #selector(tapMap))
-        let test5 = UIBarButtonItem(image: UIImage(named: "home.png"), style: .done, target: self, action: #selector(tapHome))
+        let accountTB = UIBarButtonItem(image: UIImage(named: "pub.png"), style: .done, target: self, action: #selector(tapAccount))
+        let listTB = UIBarButtonItem(image: UIImage(named: "list.png"), style: .done, target: self, action: #selector(tapList))
+        let craftTB = UIBarButtonItem(image: UIImage(named: "craft.png"), style: .done, target: self, action: #selector(tapCreate))
+        let exploreTB = UIBarButtonItem(image: UIImage(named: "explore.png"), style: .done, target: self, action: #selector(tapMap))
                // self.navigationItem.rightBarButtonItems = [test,test2,test3,test4,test5]
-        self.toolbarItems = [test,test2,test3,test4,test5]
+        self.toolbarItems = [accountTB, listTB, craftTB, exploreTB]
         
     
         // Do any additional setup after loading the view.
@@ -39,6 +38,9 @@ class HomeVC: UIViewController {
     }
     @objc func tapList(){
         openListScene()
+    }
+    @objc func tapAccount(){
+        openAccountScene()
     }
 
 
@@ -66,16 +68,13 @@ class HomeVC: UIViewController {
         //self.present(homeVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func openAccountScene()
+    {
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeVC = mainSB.instantiateViewController(withIdentifier: "AccountScene") as! AccountVC
+        homeVC.modalPresentationStyle = .fullScreen
+        //self.present(homeVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
-    */
 
 }
