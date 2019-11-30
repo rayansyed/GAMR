@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeVC: UIViewController {
+    var dbUsername : String = ""
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +51,6 @@ class HomeVC: UIViewController {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = mainSB.instantiateViewController(withIdentifier: "CreateScene") as! CreateEventVC
         homeVC.modalPresentationStyle = .fullScreen
-        //self.present(homeVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
     func openListScene()
@@ -57,7 +58,6 @@ class HomeVC: UIViewController {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = mainSB.instantiateViewController(withIdentifier: "ListScene") as! ListEventsVC
         homeVC.modalPresentationStyle = .fullScreen
-        //self.present(homeVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
     func openMapScene()
@@ -65,16 +65,15 @@ class HomeVC: UIViewController {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = mainSB.instantiateViewController(withIdentifier: "MapScene") as! EventMapVC
         homeVC.modalPresentationStyle = .fullScreen
-        //self.present(homeVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
     func openAccountScene()
     {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeVC = mainSB.instantiateViewController(withIdentifier: "AccountScene") as! AccountVC
-        homeVC.modalPresentationStyle = .fullScreen
-        //self.present(homeVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        let accountVC = mainSB.instantiateViewController(withIdentifier: "AccountScene") as! AccountVC
+        accountVC.modalPresentationStyle = .fullScreen
+        accountVC.dbUsername = self.dbUsername
+        self.navigationController?.pushViewController(accountVC, animated: true)
     }
 
 }

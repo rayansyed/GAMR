@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class EventReceiptVC: UIViewController {
     
+    //todo: continue button takes u back to home screen
     @IBOutlet var diplayTitle : UILabel!
     @IBOutlet var displayDesc : UILabel!
     @IBOutlet var displayLocation : UILabel!

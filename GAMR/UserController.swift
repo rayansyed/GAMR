@@ -56,24 +56,32 @@ public class UserController : UIViewController{
 
     }
     
-    func deleteUser(email: String){
+    func deleteUser(username: String){
+        let ref = Database.database().reference().child("users").child(username)
+
+        ref.removeValue { error, _ in
+
+            print(error)
+        }
 
         
     }
     
-    func checkUser(user : User, check: String)
+    func checkUser(user : User, check: String) -> Bool
     {
+        var returnValue : Bool = false
         Database.database().reference().child("users").observeSingleEvent(of: .value, with: {(snapshot) in
 
             if snapshot.hasChild("\(user.username)")
             {
                 
-
+                returnValue = true
             }
 
 
         })
         
+        return returnValue
 
         
     }

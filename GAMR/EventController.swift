@@ -25,6 +25,11 @@ public class EventController{
 
     }
     
+    func retrieveEvent(eventTitle : String)
+    {
+        
+    }
+    
 
 
 }

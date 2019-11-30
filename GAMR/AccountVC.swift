@@ -7,13 +7,63 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AccountVC: UIViewController {
+    
+    @IBOutlet var displayName : UILabel!
+    @IBOutlet var displayEmail : UILabel!
+    @IBOutlet var displayUsername : UILabel!
+    @IBOutlet var displayPassword : UILabel!
+    
+    var userController = UserController()
+
+    var dbUsername : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ref = Database.database().reference()
+          ref.child("users").child(dbUsername).observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+            let value = snapshot.value as? NSDictionary
+            let name = value?["name"] as? String ?? ""
+            let email = value?["email"] as? String ?? ""
+            let username = value?["username"] as? String ?? ""
+            let password = value?["password"] as? String ?? ""
+            print("Receipt")
+            self.displayName.text = name
+            self.displayEmail.text = email
+            self.displayPassword.text = password
+            self.displayUsername.text = username
+
+          // ...
+          }) { (error) in
+            print(error.localizedDescription)
+        }
 
         // Do any additional setup after loading the view.
+    }
+
+     @IBAction func removeUser() {
+
+        userController.deleteUser(username:self.dbUsername)
+        openLoginScene()
+    }
+
+    
+    @IBAction func openLoginScene(){
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let LoginVC = mainSB.instantiateViewController(withIdentifier: "LogInScene") as! LoginVC
+        LoginVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(LoginVC, animated: true)
+    }
+    
+    @IBAction func openEditScene(){
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let EditVC = mainSB.instantiateViewController(withIdentifier: "EditScene") as! EditAccountVC
+        EditVC.modalPresentationStyle = .fullScreen
+        EditVC.dbUsername = self.dbUsername
+        self.navigationController?.pushViewController(EditVC, animated: true)
     }
     
 

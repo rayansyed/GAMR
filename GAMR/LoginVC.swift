@@ -18,12 +18,13 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     var quotes: [String] = []
     var ref = Database.database().reference()
     var toolbar = UIToolbar()
+    var dbusername : String = ""
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // get the navigation bar from the current navigation controller if there is one
-
+        self.navigationItem.setHidesBackButton(true, animated:true);
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage() //remove pesky 1 pixel line
@@ -80,10 +81,10 @@ class LoginVC: UIViewController, UITextFieldDelegate{
             ref.child("users").child("\(username)").observeSingleEvent(of: .value)
             {(snapshot) in
                 let values = snapshot.value as? NSDictionary
-                let dbusername = values?["username"] as? String ?? ""
+                self.dbusername = values?["username"] as? String ?? ""
                 let dbpassword = values?["password"] as? String ?? ""
 
-                if(username == dbusername && password == dbpassword)
+                if(username == self.dbusername && password == dbpassword)
                 {
                     self.openHomeScene()
                 }
@@ -125,6 +126,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = mainSB.instantiateViewController(withIdentifier: "HomeScene") as! HomeVC
         homeVC.modalPresentationStyle = .fullScreen
+        homeVC.dbUsername = self.dbusername
         //self.present(homeVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
