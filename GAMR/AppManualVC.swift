@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import CallKit
 
 class AppManualVC: UIViewController
 {
@@ -22,33 +23,60 @@ class AppManualVC: UIViewController
     
     @IBAction func callMeButton(_ sender: UIButton)
     {
-        let url:NSURL = URL(string: "TEL://6478662821")! as NSURL
+        let url:NSURL = URL(string: "TEL://18001114267")! as NSURL
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
         
         
         @IBAction func emailMeButton(_ sender: UIButton)
         {
+            
+        
             if MFMailComposeViewController.canSendMail()
             {
                 let mail = MFMailComposeViewController()
-                mail.mailComposeDelegate = self as! MFMailComposeViewControllerDelegate
-                mail.setToRecipients(["support@gamr.com"])
+                mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
+                mail.setToRecipients(["abc@gmail.com","xyz@gmail.com"])
+                mail.setMessageBody("<h1>Hello there, This is a test.<h1>", isHTML: true)
                 present(mail, animated: true)
-                            
+                
             }
             else
             {
-                print("cannot send email")
+                print("Cannot send email")
             }
-            
             func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
             {
                 controller.dismiss(animated: true)
             }
             
+            
         
         }
+    
+    
+    @IBAction func doMessage(){
+        
+        if MFMessageComposeViewController.canSendText(){
+
+            let messageVC = MFMessageComposeViewController()
+            
+            var phoneNumber : String = "TEL://18001114267"
+            
+            
+            //set the message properties
+            messageVC.body = "Hello Support, "
+            //list of contact numbers to sent message to
+            messageVC.recipients = ["\(phoneNumber)"]
+            
+            messageVC.messageComposeDelegate = self as? MFMessageComposeViewControllerDelegate
+            
+            self.present(messageVC, animated: true, completion: nil)
+        }else{
+            print("Can't send the messsage")
+        }
+        
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
