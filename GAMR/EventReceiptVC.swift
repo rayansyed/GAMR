@@ -19,13 +19,14 @@ class EventReceiptVC: UIViewController {
     @IBOutlet var displayDate : UILabel!
     
     var dbTitle : String = ""
+    var dbUsername : String = ""
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let ref = Database.database().reference()
           ref.child("events").child(dbTitle).observeSingleEvent(of: .value, with: { (snapshot) in
-          // Get user value
+
             let value = snapshot.value as? NSDictionary
             let title = value?["title"] as? String ?? ""
             let desc = value?["desc"] as? String ?? ""
@@ -37,25 +38,19 @@ class EventReceiptVC: UIViewController {
             self.diplayTitle.text = title
             self.displayLocation.text = location
 
-          // ...
           }) { (error) in
             print(error.localizedDescription)
         }
         
     }
     
-
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func openHomeScene(){
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let listVC = mainSB.instantiateViewController(withIdentifier: "HomeScene") as! HomeVC
+        listVC.dbUsername = dbUsername
+        listVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(listVC, animated: true)
     }
-    */
-
+    
+    
 }

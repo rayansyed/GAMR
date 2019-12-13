@@ -31,6 +31,7 @@
 		A0459DFE2383165F00D06ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0459DFC2383165F00D06ECB /* Main.storyboard */; };
 		A0459E002383165F00D06ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0459DFF2383165F00D06ECB /* Assets.xcassets */; };
 		A0459E032383165F00D06ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0459E012383165F00D06ECB /* LaunchScreen.storyboard */; };
+		A0D751B023A40E7C00C383E7 /* ListDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D751AF23A40E7C00C383E7 /* ListDetailsVC.swift */; };
 		A0F159FF23831C62003D305C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0F159FE23831C62003D305C /* GoogleService-Info.plist */; };
 		A0F15A042388C230003D305C /* ListEventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F15A032388C230003D305C /* ListEventsVC.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		A0459DFF2383165F00D06ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0459E022383165F00D06ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0459E042383165F00D06ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0D751AF23A40E7C00C383E7 /* ListDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailsVC.swift; sourceTree = "<group>"; };
 		A0F159FE23831C62003D305C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0F15A032388C230003D305C /* ListEventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsVC.swift; sourceTree = "<group>"; };
 		EB423B6633BCD6DDD937F33E /* Pods-GAMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAMR.release.xcconfig"; path = "Target Support Files/Pods-GAMR/Pods-GAMR.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,10 +139,11 @@
 				046609D32383321E0091181A /* EventReceiptVC.swift */,
 				046609D52383322E0091181A /* LoginVC.swift */,
 				046609D7238332390091181A /* MyEventsVC.swift */,
-				A0F15A032388C230003D305C /* ListEventsVC.swift */,
 				A0297491238C52F300945EF3 /* SignUpVC.swift */,
 				A02974B3238C6DEA00945EF3 /* HomeVC.swift */,
 				A033BCEC23921DD10005B18B /* EditAccountVC.swift */,
+				A0F15A032388C230003D305C /* ListEventsVC.swift */,
+				A0D751AF23A40E7C00C383E7 /* ListDetailsVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				046609C82383319E0091181A /* UserController.swift in Sources */,
 				046609D42383321E0091181A /* EventReceiptVC.swift in Sources */,
 				046609D0238332010091181A /* CreateEventVC.swift in Sources */,
+				A0D751B023A40E7C00C383E7 /* ListDetailsVC.swift in Sources */,
 				046609CA238331C00091181A /* LoginController.swift in Sources */,
 				046609C6238331810091181A /* EventController.swift in Sources */,
 				A0F15A042388C230003D305C /* ListEventsVC.swift in Sources */,
