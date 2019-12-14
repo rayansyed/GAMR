@@ -21,11 +21,11 @@ class HomeVC: UIViewController {
         let listTB = UIBarButtonItem(image: UIImage(named: "list.png"), style: .done, target: self, action: #selector(tapList))
         let craftTB = UIBarButtonItem(image: UIImage(named: "craft.png"), style: .done, target: self, action: #selector(tapCreate))
         let exploreTB = UIBarButtonItem(image: UIImage(named: "explore.png"), style: .done, target: self, action: #selector(tapMap))
+        let manualTB = UIBarButtonItem(image: UIImage(named: "manual.png"), style: .done, target: self, action: #selector(tapManual))
                // self.navigationItem.rightBarButtonItems = [test,test2,test3,test4,test5]
-        self.toolbarItems = [accountTB, listTB, craftTB, exploreTB]
-        
-    
-        // Do any additional setup after loading the view.
+        self.toolbarItems = [accountTB, listTB, craftTB, exploreTB, manualTB]
+
+
     }
     
     
@@ -44,28 +44,40 @@ class HomeVC: UIViewController {
     @objc func tapAccount(){
         openAccountScene()
     }
+    @objc func tapManual(){
+        openManualScene()
+    }
 
 
     func openCreateScene()
     {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeVC = mainSB.instantiateViewController(withIdentifier: "CreateScene") as! CreateEventVC
-        homeVC.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        let createVC = mainSB.instantiateViewController(withIdentifier: "CreateScene") as! CreateEventVC
+        createVC.modalPresentationStyle = .fullScreen
+        createVC.dbUsername = self.dbUsername
+        self.navigationController?.pushViewController(createVC, animated: true)
     }
     func openListScene()
     {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeVC = mainSB.instantiateViewController(withIdentifier: "ListScene") as! ListEventsVC
-        homeVC.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        let listVC = mainSB.instantiateViewController(withIdentifier: "ListScene") as! ListEventsVC
+        listVC.modalPresentationStyle = .fullScreen
+        listVC.dbUsername = self.dbUsername
+        self.navigationController?.pushViewController(listVC, animated: true)
     }
     func openMapScene()
     {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeVC = mainSB.instantiateViewController(withIdentifier: "MapScene") as! EventMapVC
-        homeVC.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        let mapVC = mainSB.instantiateViewController(withIdentifier: "MapScene") as! EventMapVC
+        mapVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(mapVC, animated: true)
+    }
+    func openManualScene()
+    {
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let manualVC = mainSB.instantiateViewController(withIdentifier: "ManualScene") as! AppManualVC
+        manualVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(manualVC, animated: true)
     }
     func openAccountScene()
     {
@@ -77,3 +89,4 @@ class HomeVC: UIViewController {
     }
 
 }
+

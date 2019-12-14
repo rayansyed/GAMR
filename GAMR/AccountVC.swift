@@ -19,6 +19,9 @@ class AccountVC: UIViewController {
     var userController = UserController()
 
     var dbUsername : String = ""
+    var dbPassword : String = ""
+    var dbEmail : String = ""
+    var dbName : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,10 @@ class AccountVC: UIViewController {
             let username = value?["username"] as? String ?? ""
             let password = value?["password"] as? String ?? ""
             print("Receipt")
+            self.dbName = name
+            self.dbPassword = password
+            self.dbUsername = username
+            self.dbEmail = email
             self.displayName.text = name
             self.displayEmail.text = email
             self.displayPassword.text = password
@@ -63,6 +70,9 @@ class AccountVC: UIViewController {
         let EditVC = mainSB.instantiateViewController(withIdentifier: "EditScene") as! EditAccountVC
         EditVC.modalPresentationStyle = .fullScreen
         EditVC.dbUsername = self.dbUsername
+        EditVC.dbEmail = self.dbEmail
+        EditVC.dbName = self.dbName
+        EditVC.dbPassword = self.dbPassword
         self.navigationController?.pushViewController(EditVC, animated: true)
     }
     
@@ -78,3 +88,4 @@ class AccountVC: UIViewController {
     */
 
 }
+

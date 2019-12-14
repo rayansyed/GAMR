@@ -22,7 +22,7 @@ class AppManualVC: UIViewController
     
     @IBAction func callMeButton(_ sender: UIButton)
     {
-        let url:NSURL = URL(string: "TEL://6478662821")! as NSURL
+        let url:NSURL = URL(string: "TEL://18001114267")! as NSURL
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
         
@@ -50,6 +50,29 @@ class AppManualVC: UIViewController
         
         }
     
+    
+    @IBAction func doMessage(){
+
+        if MFMessageComposeViewController.canSendText(){
+
+            let messageVC = MFMessageComposeViewController()
+
+            let phoneNumber : String = "TEL://18001114267"
+
+
+            messageVC.body = "Hello Support, "
+            
+            messageVC.recipients = ["\(phoneNumber)"]
+
+            messageVC.messageComposeDelegate = self as? MFMessageComposeViewControllerDelegate
+
+            self.present(messageVC, animated: true, completion: nil)
+        }else{
+            print("Can't send the messsage")
+        }
+        
+
+    }
     
     override func viewWillAppear(_ animated: Bool) {
     AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)

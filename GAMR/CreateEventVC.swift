@@ -13,6 +13,7 @@ import FirebaseDatabase
 
 class CreateEventVC: UIViewController {
     var eventController = EventController()
+    
 
     @IBOutlet var eventTitle : UITextField!
     @IBOutlet var eventDesc : UITextField!
@@ -23,6 +24,8 @@ class CreateEventVC: UIViewController {
     var edesc : String = ""
     var elocation : String = ""
     var edate : String = ""
+    var dbUsername : String = ""
+
     
 
     override func viewDidLoad() {
@@ -47,7 +50,7 @@ class CreateEventVC: UIViewController {
             let strDate = dateFormatter.string(from: eventDate.date)
             edate = strDate
             
-            let newEvent = Event(Title: etitle, Desc: edesc, Location: elocation, Date: edate)
+            let newEvent = Event(Title: etitle, Desc: edesc, Location: elocation, Date: edate, Creator: dbUsername)
             eventController.insertEvent(newEvent: newEvent)
 
             
@@ -70,6 +73,8 @@ class CreateEventVC: UIViewController {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let receiptVC = mainSB.instantiateViewController(withIdentifier: "ReceiptScene") as! EventReceiptVC
         receiptVC.dbTitle = self.etitle
+        receiptVC.dbUsername = self.dbUsername
+        
         //self.present(receiptVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(receiptVC, animated: true)
     }
@@ -84,6 +89,7 @@ class CreateEventVC: UIViewController {
     
     
 }
+
 
 
 

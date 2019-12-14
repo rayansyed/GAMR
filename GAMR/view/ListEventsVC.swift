@@ -12,13 +12,29 @@ import FirebaseDatabase
 class ListEventsVC: UITableViewController {
     
     var keyArray : [String] = []
-    var valueArray : [String] = []
+    var valueArray : [Any?] = []
     var eventTitle: String = ""
+    var SelectedEvent : String = ""
+    var dbUsername : String = ""
+    
+    var eTitle : String = ""
+    var eLocation : String = ""
+    var eDesc : String = ""
+    var eDate : String = ""
+    var eHost : String = ""
     
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getData()
+        self.navigationItem
+
+      
+    }
+    
+    func getData()
+    {
         let ref = Database.database().reference()
         ref.child("events").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -28,11 +44,10 @@ class ListEventsVC: UITableViewController {
                 let value = snap.value
                 print("key = \(key)  value = \(value!)")
                 self.keyArray.append(key)
-//                self.valueArray.append(value as! String)
+                self.valueArray.append(value)
                 
               }
             
-            print(self.keyArray)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -40,10 +55,6 @@ class ListEventsVC: UITableViewController {
             }) { (error) in
               print(error.localizedDescription)
           }
-    
-    
-        
-      
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)-> Int{
@@ -57,10 +68,42 @@ class ListEventsVC: UITableViewController {
 
         return cell
     }
-
-
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+                
 
+        SelectedEvent = keyArray[indexPath.row]
+    
+            let ref = Database.database().reference()
+            ref.child("events").child(SelectedEvent).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.eTitle = value?["title"] as? String ?? ""
+            self.eDesc = value?["desc"] as? String ?? ""
+            self.eLocation = value?["location"] as? String ?? ""
+            self.eDate = value?["date"] as? String ?? ""
+            self.eHost = value?["creator"] as? String ?? ""
+            print(self.eTitle)
+            let mainSB = UIStoryboard(name: "Main", bundle: nil)
+            let detailsVC = mainSB.instantiateViewController(identifier: "detailsVC") as! ListDetailsVC;
+                
+            detailsVC.eTitle = self.eTitle
+            detailsVC.eDate = self.eDate
+            detailsVC.eDesc = self.eDesc
+            detailsVC.eLocation = self.eLocation
+            detailsVC.eHost = self.eHost
+            detailsVC.dbUsername = self.dbUsername
+            self.present(detailsVC, animated: true, completion: nil)
+
+           // self.navigationController?.pushViewController(detailsVC, animated: true)
+
+                
+
+          }) { (error) in
+            print(error.localizedDescription)
+        }
+
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -72,3 +115,4 @@ class ListEventsVC: UITableViewController {
     */
 
 }
+
